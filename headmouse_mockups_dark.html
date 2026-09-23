@@ -1057,7 +1057,6 @@
   <p style="font-size:14px; color:var(--text-mute); max-width:760px; margin:0 auto; line-height:1.6;">Diseño e implementación de un sistema de asistencia manos libres para la interacción con ordenadores mediante el control del cursor para personas con discapacidad motriz registradas en la SENADIS hasta el año 2026.</p>
 </div>
 
-
 <div class="landing-outer">
   <p class="eyebrow" style="text-align:center;">Vista web · <b>Landing page</b></p>
   <div class="landing-frame">
@@ -1373,33 +1372,39 @@
         <div class="item"><div class="ico"></div><span>Dispositivo</span></div>
         <div class="item"><div class="ico"></div><span>Historial</span></div>
         <div class="item"><div class="ico"></div><span>Facturación</span></div>
-        <div class="item"><div class="ico"></div><span>Perfil</span></div>
+        <a href="#pantalla-perfil-paciente" class="item" style="text-decoration:none;"><div class="ico"></div><span>Perfil</span></a>
       </div>
     </div></div>
   </div>
 
   <!-- 3b. PACIENTE - Mis cuidadores y dispositivos -->
-  <div class="phone-block">
+  <div class="phone-block" id="pantalla-mis-cuidadores">
     <div class="phone-label">Rol Paciente · <b>Mis cuidadores</b></div>
     <div class="phone"><div class="screen">
       <div class="statusbar"><span>9:41</span><span>●●●</span></div>
       <div class="topbar"><h2>Mis cuidadores</h2></div>
       <div class="content">
+        <a href="#pantalla-detalle-cuidador" style="text-decoration:none; color:inherit;">
         <div class="patient-card">
           <div class="avatar">MG</div>
           <div class="info"><div class="name">María González</div><div class="meta">Madre · Principal · Conectada</div></div>
           <span class="dot-status"></span>
         </div>
+        </a>
+        <a href="#pantalla-detalle-cuidador" style="text-decoration:none; color:inherit;">
         <div class="patient-card">
           <div class="avatar">CH</div>
           <div class="info"><div class="name">Carlos Herrera</div><div class="meta">Fisioterapeuta · Secundario · Conectado</div></div>
           <span class="dot-status"></span>
         </div>
+        </a>
+        <a href="#pantalla-detalle-cuidador" style="text-decoration:none; color:inherit;">
         <div class="patient-card">
           <div class="avatar">AT</div>
           <div class="info"><div class="name">Ana Torres</div><div class="meta">Enfermera · Secundario · Desconectada</div></div>
           <span class="dot-status off"></span>
         </div>
+        </a>
 
         <p class="section-title">Mis dispositivos</p>
         <div class="device-card">
@@ -1441,7 +1446,130 @@
         <div class="item active"><div class="ico"></div><span>Cuidadores</span></div>
         <div class="item"><div class="ico"></div><span>Dispositivo</span></div>
         <div class="item"><div class="ico"></div><span>Historial</span></div>
-        <div class="item"><div class="ico"></div><span>Perfil</span></div>
+        <a href="#pantalla-perfil-paciente" class="item" style="text-decoration:none;"><div class="ico"></div><span>Perfil</span></a>
+      </div>
+    </div></div>
+  </div>
+
+  <!-- 3b2. PACIENTE - Detalle de cuidador -->
+  <div class="phone-block" id="pantalla-detalle-cuidador">
+    <div class="phone-label">Rol Paciente · <b>Detalle de cuidador</b></div>
+    <div class="phone"><div class="screen">
+      <div class="statusbar"><span>9:41</span><span>●●●</span></div>
+      <div class="topbar"><a href="#pantalla-mis-cuidadores" class="back" style="text-decoration:none;">‹</a><h2>Cuidador</h2></div>
+      <div class="content">
+        <div style="display:flex; flex-direction:column; align-items:center; gap:8px; margin:6px 0 16px;">
+          <div class="avatar" style="width:56px; height:56px; font-size:18px; flex:0 0 56px;">CH</div>
+          <div style="font-family:var(--disp); font-size:15px; font-weight:600; color:var(--text);">Carlos Herrera</div>
+          <span class="badge amber">Fisioterapeuta · Secundario</span>
+        </div>
+
+        <p class="section-title">Permisos otorgados</p>
+        <div class="card">
+          <div class="row"><span class="k">Ver mis datos</span><span class="v"><span class="badge ok">Sí</span></span></div>
+          <div class="row"><span class="k">Editar mis datos</span><span class="v"><span class="badge ok">Sí</span></span></div>
+          <div class="row"><span class="k">Configurar dispositivo</span><span class="v"><span class="badge ok">Sí</span></span></div>
+          <div class="row"><span class="k">Calibrar dispositivo</span><span class="v"><span class="badge warn">No</span></span></div>
+        </div>
+
+        <p class="section-title">Asignación</p>
+        <div class="card">
+          <div class="row"><span class="k">Parentesco</span><span class="v">Fisioterapeuta</span></div>
+          <div class="row"><span class="k">Asignado desde</span><span class="v">Mar 2024</span></div>
+          <div class="row"><span class="k">Estado</span><span class="v"><span class="badge ok">Activo</span></span></div>
+        </div>
+
+        <a href="#pantalla-confirmar-quitar-cuidador" class="btn coral" style="display:block; text-decoration:none; margin-top:18px;">Quitar cuidador</a>
+      </div>
+      <div class="bottom-nav">
+        <div class="item"><div class="ico"></div><span>Inicio</span></div>
+        <div class="item active"><div class="ico"></div><span>Cuidadores</span></div>
+        <div class="item"><div class="ico"></div><span>Dispositivo</span></div>
+        <div class="item"><div class="ico"></div><span>Historial</span></div>
+        <a href="#pantalla-perfil-paciente" class="item" style="text-decoration:none;"><div class="ico"></div><span>Perfil</span></a>
+      </div>
+    </div></div>
+  </div>
+
+  <!-- 3b3. PACIENTE - Confirmar quitar cuidador -->
+  <div class="phone-block" id="pantalla-confirmar-quitar-cuidador">
+    <div class="phone-label">Rol Paciente · <b>Confirmar remoción</b></div>
+    <div class="phone"><div class="screen">
+      <div class="statusbar"><span>9:41</span><span>●●●</span></div>
+      <div class="topbar"><a href="#pantalla-detalle-cuidador" class="back" style="text-decoration:none;">‹</a><h2>Cuidador</h2></div>
+      <div class="content" style="filter:blur(1.5px); opacity:.5; pointer-events:none;">
+        <div style="display:flex; flex-direction:column; align-items:center; gap:8px; margin:6px 0 16px;">
+          <div class="avatar" style="width:56px; height:56px; font-size:18px; flex:0 0 56px;">CH</div>
+          <div style="font-family:var(--disp); font-size:15px; font-weight:600; color:var(--text);">Carlos Herrera</div>
+          <span class="badge amber">Fisioterapeuta · Secundario</span>
+        </div>
+        <div class="card">
+          <div class="row"><span class="k">Ver mis datos</span><span class="v"><span class="badge ok">Sí</span></span></div>
+          <div class="row"><span class="k">Editar mis datos</span><span class="v"><span class="badge ok">Sí</span></span></div>
+        </div>
+      </div>
+
+      <div style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center; padding:24px;">
+        <div style="background:var(--panel); border:1px solid var(--line); border-radius:16px; padding:20px; width:100%; box-shadow:0 12px 40px rgba(0,0,0,.5);">
+          <p style="margin:0 0 10px; font-family:var(--disp); font-size:14.5px; font-weight:600; color:var(--text);">¿Quitar a Carlos Herrera como tu cuidador?</p>
+          <p style="margin:0 0 16px; font-size:11.5px; color:var(--text-mute); line-height:1.5;">Carlos perderá acceso a tus datos y ya no podrá configurar ni calibrar tu dispositivo. Esta acción no elimina su cuenta, solo termina su asignación como tu cuidador.</p>
+          <div class="btn coral" style="margin-top:0;">Sí, quitar acceso</div>
+          <a href="#pantalla-detalle-cuidador" class="btn ghost" style="display:block; text-decoration:none;">Cancelar</a>
+        </div>
+      </div>
+    </div></div>
+  </div>
+
+  <!-- 3c. PACIENTE - Historial (diagnósticos) -->
+  <div class="phone-block" id="pantalla-historial">
+    <div class="phone-label">Rol Paciente · <b>Historial clínico</b></div>
+    <div class="phone"><div class="screen">
+      <div class="statusbar"><span>9:41</span><span>●●●</span></div>
+      <div class="topbar"><h2>Historial clínico</h2></div>
+      <div class="content">
+        <div class="audit-filter">
+          <div class="audit-chip selected">Todos</div>
+          <div class="audit-chip">Principal</div>
+          <div class="audit-chip">Secundario</div>
+          <div class="audit-chip">Antecedente</div>
+        </div>
+
+        <div class="audit-table">
+          <div class="audit-row">
+            <div class="top-line"><span class="user">Parálisis cerebral espástica</span><span class="badge ok">Principal</span></div>
+            <div class="action">Afecta el control motor fino de manos y cuello; dificulta sostener un mouse convencional.</div>
+            <div class="meta"><span>Diagnosticado: <b>14 mar 2022</b></span><span>Vigente</span></div>
+            <div class="meta"><span>Dr. Marcos Insfrán</span><span>Neurología · Hospital de Clínicas</span></div>
+          </div>
+
+          <div class="audit-row">
+            <div class="top-line"><span class="user">Contractura cervical crónica</span><span class="badge amber">Secundario</span></div>
+            <div class="action">Limita el rango de movimiento lateral de cabeza usado para el control del cursor.</div>
+            <div class="meta"><span>Diagnosticado: <b>02 ago 2023</b></span><span>Vigente</span></div>
+            <div class="meta"><span>Lic. Carlos Herrera</span><span>Fisioterapia · CDT UNIDA</span></div>
+          </div>
+
+          <div class="audit-row">
+            <div class="top-line"><span class="user">Evaluación funcional actualizada</span><span class="badge amber">Secundario</span></div>
+            <div class="action">Se registró mejora en el control de la inclinación lateral tras 3 meses de uso.</div>
+            <div class="meta"><span>Diagnosticado: <b>10 jun 2026</b></span><span>Vigente</span></div>
+            <div class="meta"><span>Lic. Carlos Herrera</span><span>Fisioterapia · CDT UNIDA</span></div>
+          </div>
+
+          <div class="audit-row warn">
+            <div class="top-line"><span class="user">Cirugía de columna cervical</span><span class="badge warn">Antecedente</span></div>
+            <div class="action">Antecedente quirúrgico registrado por el cuidador; sin seguimiento activo.</div>
+            <div class="meta"><span>Fecha: <b>27 nov 2019</b></span><span>No vigente</span></div>
+            <div class="meta"><span>Registrado por: María González</span><span>Cuidadora principal</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="bottom-nav">
+        <div class="item"><div class="ico"></div><span>Inicio</span></div>
+        <div class="item"><div class="ico"></div><span>Cuidadores</span></div>
+        <div class="item"><div class="ico"></div><span>Dispositivo</span></div>
+        <div class="item active"><div class="ico"></div><span>Historial</span></div>
+        <a href="#pantalla-perfil-paciente" class="item" style="text-decoration:none;"><div class="ico"></div><span>Perfil</span></a>
       </div>
     </div></div>
   </div>
@@ -1526,7 +1654,7 @@
         <div class="item active"><div class="ico"></div><span>Dispositivo</span></div>
         <div class="item"><div class="ico"></div><span>Historial</span></div>
         <div class="item"><div class="ico"></div><span>Facturación</span></div>
-        <div class="item"><div class="ico"></div><span>Perfil</span></div>
+        <a href="#pantalla-perfil-paciente" class="item" style="text-decoration:none;"><div class="ico"></div><span>Perfil</span></a>
       </div>
     </div></div>
   </div>
@@ -1551,11 +1679,11 @@
           <div class="lbl-row"><span class="name">Delay de movimiento</span><span class="val">12</span></div>
           <div class="track"><div class="fill" style="width:55%"></div><div class="handle" style="left:55%"></div></div>
         </div>
-        <p class="section-title">Funciones de los clips</p>
+        <p class="section-title">Funciones de los botones</p>
 
         <div class="clip-group">
           <div class="clip-group-head">
-            <span class="name">Clip 1</span>
+            <span class="name">Botón 1</span>
             <span class="default-tag">Default: MOUSE_LEFT</span>
           </div>
           <div class="clip-options">
@@ -1568,7 +1696,7 @@
 
         <div class="clip-group">
           <div class="clip-group-head">
-            <span class="name">Clip 2</span>
+            <span class="name">Botón 2</span>
             <span class="default-tag">Default: MOUSE_RIGHT</span>
           </div>
           <div class="clip-options">
@@ -1587,7 +1715,76 @@
         <div class="item active"><div class="ico"></div><span>Dispositivo</span></div>
         <div class="item"><div class="ico"></div><span>Historial</span></div>
         <div class="item"><div class="ico"></div><span>Facturación</span></div>
-        <div class="item"><div class="ico"></div><span>Perfil</span></div>
+        <a href="#pantalla-perfil-paciente" class="item" style="text-decoration:none;"><div class="ico"></div><span>Perfil</span></a>
+      </div>
+    </div></div>
+  </div>
+
+  <!-- 6c. PACIENTE - Perfil -->
+  <div class="phone-block" id="pantalla-perfil-paciente">
+    <div class="phone-label">Rol Paciente · <b>Perfil</b></div>
+    <div class="phone"><div class="screen">
+      <div class="statusbar"><span>9:41</span><span>●●●</span></div>
+      <div class="topbar"><h2>Mi perfil</h2></div>
+      <div class="content">
+        <div style="display:flex; flex-direction:column; align-items:center; gap:8px; margin:6px 0 18px;">
+          <div class="avatar" style="width:64px; height:64px; font-size:20px; flex:0 0 64px;">MR</div>
+          <div style="font-family:var(--disp); font-size:16px; font-weight:600; color:var(--text);">Marcos Rojas</div>
+          <span class="badge ok">Paciente</span>
+        </div>
+
+        <p class="section-title">Datos personales</p>
+        <div class="card">
+          <div class="row"><span class="k">Documento</span><span class="v">4.512.897</span></div>
+          <div class="row"><span class="k">Fecha de nacimiento</span><span class="v">14 mar 1998</span></div>
+          <div class="row"><span class="k">Sexo</span><span class="v">Masculino</span></div>
+          <div class="row"><span class="k">Teléfono</span><span class="v">0981 234 567</span></div>
+          <div class="row"><span class="k">Dirección</span><span class="v">San Lorenzo, PY</span></div>
+        </div>
+
+        <p class="section-title">Registro SENADIS</p>
+        <div class="card">
+          <div class="row"><span class="k">N° de registro</span><span class="v">SEN-2024-00871</span></div>
+          <div class="row"><span class="k">Estado</span><span class="v"><span class="badge ok">Activo</span></span></div>
+        </div>
+
+        <p class="section-title">Contacto de emergencia</p>
+        <div class="card">
+          <div class="row"><span class="k">Nombre</span><span class="v">María González</span></div>
+          <div class="row"><span class="k">Teléfono</span><span class="v">0982 111 222</span></div>
+        </div>
+
+        <p class="section-title">Datos clínicos funcionales</p>
+        <div class="card">
+          <div class="row"><span class="k">Movilidad cervical</span><span class="v">Parcial</span></div>
+          <div class="row"><span class="k">Movilidad miofacial</span><span class="v">Conservada</span></div>
+          <div class="row"><span class="k">Control cefálico</span><span class="v">Estable</span></div>
+          <div class="row"><span class="k">Movimientos involuntarios</span><span class="v">No</span></div>
+          <div class="row" style="align-items:flex-start; flex-direction:column; gap:4px; margin-top:9px;">
+            <span class="k">Observaciones</span>
+            <span class="v" style="font-weight:400; line-height:1.4;">Mejor control del cursor en sesiones matutinas; fatiga cervical notoria después de 40 min de uso continuo.</span>
+          </div>
+        </div>
+        <p style="font-size:10.5px; color:var(--text-mute); margin:-6px 0 0;">Estos datos solo puede modificarlos tu cuidador o el fisioterapeuta a cargo.</p>
+
+        <p class="section-title">Cuenta</p>
+        <div class="card">
+          <div class="row"><span class="k">Correo</span><span class="v">marcos.rojas@mail.com</span></div>
+          <div class="row"><span class="k">Último acceso</span><span class="v">Hoy, 08:15</span></div>
+          <div class="row"><span class="k">Miembro desde</span><span class="v">Mar 2024</span></div>
+        </div>
+
+        <div class="btn ghost" style="margin-top:16px;">Editar datos personales</div>
+        <div class="btn ghost">Cambiar contraseña</div>
+        <a href="#" class="btn ghost" style="display:block; text-decoration:none;">Política de privacidad</a>
+        <div class="btn coral">Cerrar sesión</div>
+      </div>
+      <div class="bottom-nav">
+        <div class="item"><div class="ico"></div><span>Inicio</span></div>
+        <div class="item"><div class="ico"></div><span>Dispositivo</span></div>
+        <div class="item"><div class="ico"></div><span>Historial</span></div>
+        <div class="item"><div class="ico"></div><span>Facturación</span></div>
+        <div class="item active"><div class="ico"></div><span>Perfil</span></div>
       </div>
     </div></div>
   </div>
@@ -1623,10 +1820,250 @@
       </div>
       <div class="bottom-nav">
         <div class="item active"><div class="ico"></div><span>Pacientes</span></div>
-        <div class="item"><div class="ico"></div><span>Diagnósticos</span></div>
+        <a href="#pantalla-cuidador-diagnosticos" class="item" style="text-decoration:none;"><div class="ico"></div><span>Diagnósticos</span></a>
         <div class="item"><div class="ico"></div><span>Historial</span></div>
         <div class="item"><div class="ico"></div><span>Facturación</span></div>
-        <div class="item"><div class="ico"></div><span>Perfil</span></div>
+        <a href="#pantalla-perfil-cuidador" class="item" style="text-decoration:none;"><div class="ico"></div><span>Perfil</span></a>
+      </div>
+    </div></div>
+  </div>
+
+  <!-- 7c. CUIDADOR - Diagnósticos (visualizar) -->
+  <div class="phone-block" id="pantalla-cuidador-diagnosticos">
+    <div class="phone-label">Rol Cuidador · <b>Diagnósticos</b></div>
+    <div class="phone"><div class="screen">
+      <div class="statusbar"><span>9:41</span><span>●●●</span></div>
+      <div class="topbar"><h2>Diagnósticos</h2></div>
+      <div class="content">
+        <a href="#pantalla-agregar-diagnostico" class="btn cyan" style="display:block; text-decoration:none; margin-top:0;">+ Nuevo diagnóstico</a>
+
+        <div class="audit-filter">
+          <div class="audit-chip selected">Todos</div>
+          <div class="audit-chip">Marcos Rojas</div>
+          <div class="audit-chip">Lucía Fernández</div>
+          <div class="audit-chip">Juan Paredes</div>
+        </div>
+
+        <div class="audit-table">
+          <div class="audit-row">
+            <div class="top-line"><span class="user">Marcos Rojas</span><span class="badge amber">Secundario</span></div>
+            <div class="action">Contractura cervical crónica</div>
+            <div class="meta"><span>Diagnosticado: <b>02 ago 2023</b></span><span>Vigente</span></div>
+            <a href="#pantalla-editar-diagnostico" style="display:flex; justify-content:flex-end; margin-top:8px; text-decoration:none;">
+              <span class="badge ok" style="cursor:pointer;">✎ Editar</span>
+            </a>
+          </div>
+
+          <div class="audit-row">
+            <div class="top-line"><span class="user">Marcos Rojas</span><span class="badge amber">Secundario</span></div>
+            <div class="action">Evaluación funcional actualizada — mejora en inclinación lateral</div>
+            <div class="meta"><span>Diagnosticado: <b>10 jun 2026</b></span><span>Vigente</span></div>
+            <a href="#pantalla-editar-diagnostico" style="display:flex; justify-content:flex-end; margin-top:8px; text-decoration:none;">
+              <span class="badge ok" style="cursor:pointer;">✎ Editar</span>
+            </a>
+          </div>
+
+          <div class="audit-row warn">
+            <div class="top-line"><span class="user">Lucía Fernández</span><span class="badge warn">Antecedente</span></div>
+            <div class="action">Cirugía de columna cervical</div>
+            <div class="meta"><span>Fecha: <b>27 nov 2019</b></span><span>No vigente</span></div>
+            <a href="#pantalla-editar-diagnostico" style="display:flex; justify-content:flex-end; margin-top:8px; text-decoration:none;">
+              <span class="badge ok" style="cursor:pointer;">✎ Editar</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="bottom-nav">
+        <div class="item"><div class="ico"></div><span>Pacientes</span></div>
+        <div class="item active"><div class="ico"></div><span>Diagnósticos</span></div>
+        <div class="item"><div class="ico"></div><span>Historial</span></div>
+        <div class="item"><div class="ico"></div><span>Facturación</span></div>
+        <a href="#pantalla-perfil-cuidador" class="item" style="text-decoration:none;"><div class="ico"></div><span>Perfil</span></a>
+      </div>
+    </div></div>
+  </div>
+
+  <!-- 7d. CUIDADOR - Agregar diagnóstico -->
+  <div class="phone-block" id="pantalla-agregar-diagnostico">
+    <div class="phone-label">Rol Cuidador · <b>Agregar diagnóstico</b></div>
+    <div class="phone"><div class="screen">
+      <div class="statusbar"><span>9:41</span><span>●●●</span></div>
+      <div class="topbar"><a href="#pantalla-cuidador-diagnosticos" class="back" style="text-decoration:none;">‹</a><h2>Nuevo diagnóstico</h2></div>
+      <div class="content">
+        <p class="section-title">Paciente</p>
+        <div class="patient-card" style="margin-bottom:4px;">
+          <div class="avatar">MR</div>
+          <div class="info"><div class="name">Marcos Rojas</div><div class="meta">Principal · Conectado</div></div>
+        </div>
+
+        <p class="section-title">Tipo de diagnóstico</p>
+        <div class="motivo-grid">
+          <div class="motivo-opt selected"><div class="lbl">Tipo</div><div class="val">Principal</div></div>
+          <div class="motivo-opt"><div class="lbl">Tipo</div><div class="val">Secundario</div></div>
+          <div class="motivo-opt"><div class="lbl">Tipo</div><div class="val">Antecedente</div></div>
+        </div>
+
+        <p class="section-title">Datos clínicos</p>
+        <div class="field">
+          <span class="ico">🩺</span>
+          <span>Diagnóstico (ej. Contractura cervical)</span>
+        </div>
+        <div class="field" style="align-items:flex-start;">
+          <span class="ico">📝</span>
+          <span>Descripción / observaciones</span>
+        </div>
+        <div class="field">
+          <span class="ico">📅</span>
+          <span>Fecha del diagnóstico</span>
+        </div>
+
+        <p class="section-title">Profesional informante</p>
+        <div class="field-row">
+          <div class="field"><span class="ico">👩‍⚕️</span><span>Nombre del profesional</span></div>
+        </div>
+        <div class="field-row">
+          <div class="field"><span class="ico">🏥</span><span>Institución</span></div>
+          <div class="field"><span class="ico">🔖</span><span>Especialidad</span></div>
+        </div>
+
+        <p class="section-title">Vigencia</p>
+        <div class="motivo-grid">
+          <div class="motivo-opt selected"><div class="lbl">Estado</div><div class="val">Vigente</div></div>
+          <div class="motivo-opt"><div class="lbl">Estado</div><div class="val">No vigente</div></div>
+        </div>
+
+        <div class="btn cyan" style="margin-top:16px;">Guardar diagnóstico</div>
+        <a href="#pantalla-cuidador-diagnosticos" class="btn ghost" style="display:block; text-decoration:none;">Cancelar</a>
+      </div>
+      <p class="footer-note">Se registrará como <b style="color:var(--cyan)">registrado_por: María González</b></p>
+      <div class="bottom-nav">
+        <div class="item"><div class="ico"></div><span>Pacientes</span></div>
+        <div class="item active"><div class="ico"></div><span>Diagnósticos</span></div>
+        <div class="item"><div class="ico"></div><span>Historial</span></div>
+        <div class="item"><div class="ico"></div><span>Facturación</span></div>
+        <a href="#pantalla-perfil-cuidador" class="item" style="text-decoration:none;"><div class="ico"></div><span>Perfil</span></a>
+      </div>
+    </div></div>
+  </div>
+
+  <!-- 7e. CUIDADOR - Editar diagnóstico -->
+  <div class="phone-block" id="pantalla-editar-diagnostico">
+    <div class="phone-label">Rol Cuidador · <b>Editar diagnóstico</b></div>
+    <div class="phone"><div class="screen">
+      <div class="statusbar"><span>9:41</span><span>●●●</span></div>
+      <div class="topbar"><a href="#pantalla-cuidador-diagnosticos" class="back" style="text-decoration:none;">‹</a><h2>Editar diagnóstico</h2></div>
+      <div class="content">
+        <p class="section-title">Paciente</p>
+        <div class="patient-card" style="margin-bottom:4px;">
+          <div class="avatar">MR</div>
+          <div class="info"><div class="name">Marcos Rojas</div><div class="meta">Principal · Conectado</div></div>
+        </div>
+
+        <p class="section-title">Tipo de diagnóstico</p>
+        <div class="motivo-grid">
+          <div class="motivo-opt"><div class="lbl">Tipo</div><div class="val">Principal</div></div>
+          <div class="motivo-opt selected"><div class="lbl">Tipo</div><div class="val">Secundario</div></div>
+          <div class="motivo-opt"><div class="lbl">Tipo</div><div class="val">Antecedente</div></div>
+        </div>
+
+        <p class="section-title">Datos clínicos</p>
+        <div class="field">
+          <span class="ico">🩺</span>
+          <span style="color:var(--text);">Contractura cervical crónica</span>
+        </div>
+        <div class="field" style="align-items:flex-start;">
+          <span class="ico">📝</span>
+          <span style="color:var(--text);">Limita el rango de movimiento lateral de cabeza usado para el control del cursor.</span>
+        </div>
+        <div class="field">
+          <span class="ico">📅</span>
+          <span style="color:var(--text);">02 ago 2023</span>
+        </div>
+
+        <p class="section-title">Profesional informante</p>
+        <div class="field-row">
+          <div class="field"><span class="ico">👩‍⚕️</span><span style="color:var(--text);">Lic. Carlos Herrera</span></div>
+        </div>
+        <div class="field-row">
+          <div class="field"><span class="ico">🏥</span><span style="color:var(--text);">CDT UNIDA</span></div>
+          <div class="field"><span class="ico">🔖</span><span style="color:var(--text);">Fisioterapia</span></div>
+        </div>
+
+        <p class="section-title">Vigencia</p>
+        <div class="motivo-grid">
+          <div class="motivo-opt selected"><div class="lbl">Estado</div><div class="val">Vigente</div></div>
+          <div class="motivo-opt"><div class="lbl">Estado</div><div class="val">No vigente</div></div>
+        </div>
+
+        <div style="display:flex; gap:8px; margin-top:16px;">
+          <div class="btn cyan" style="margin:0; width:auto; flex:1;">Guardar cambios</div>
+          <div class="btn coral" style="margin:0; width:auto; flex:1;">Eliminar</div>
+        </div>
+        <a href="#pantalla-cuidador-diagnosticos" class="btn ghost" style="display:block; text-decoration:none;">Cancelar</a>
+      </div>
+      <p class="footer-note">Última edición por <b style="color:var(--cyan)">María González</b> · Hoy, 09:40</p>
+      <div class="bottom-nav">
+        <div class="item"><div class="ico"></div><span>Pacientes</span></div>
+        <div class="item active"><div class="ico"></div><span>Diagnósticos</span></div>
+        <div class="item"><div class="ico"></div><span>Historial</span></div>
+        <div class="item"><div class="ico"></div><span>Facturación</span></div>
+        <a href="#pantalla-perfil-cuidador" class="item" style="text-decoration:none;"><div class="ico"></div><span>Perfil</span></a>
+      </div>
+    </div></div>
+  </div>
+
+  <!-- 7f. CUIDADOR - Perfil -->
+  <div class="phone-block" id="pantalla-perfil-cuidador">
+    <div class="phone-label">Rol Cuidador · <b>Perfil</b></div>
+    <div class="phone"><div class="screen">
+      <div class="statusbar"><span>9:41</span><span>●●●</span></div>
+      <div class="topbar"><h2>Mi perfil</h2></div>
+      <div class="content">
+        <div style="display:flex; flex-direction:column; align-items:center; gap:8px; margin:6px 0 18px;">
+          <div class="avatar" style="width:64px; height:64px; font-size:20px; flex:0 0 64px;">MG</div>
+          <div style="font-family:var(--disp); font-size:16px; font-weight:600; color:var(--text);">María González</div>
+          <span class="badge amber">Cuidadora · Madre</span>
+        </div>
+
+        <p class="section-title">Datos personales</p>
+        <div class="card">
+          <div class="row"><span class="k">Documento</span><span class="v">3.998.201</span></div>
+          <div class="row"><span class="k">Fecha de nacimiento</span><span class="v">22 jul 1970</span></div>
+          <div class="row"><span class="k">Sexo</span><span class="v">Femenino</span></div>
+          <div class="row"><span class="k">Ocupación</span><span class="v">Ama de casa</span></div>
+        </div>
+
+        <p class="section-title">Contacto</p>
+        <div class="card">
+          <div class="row"><span class="k">Teléfono</span><span class="v">0982 111 222</span></div>
+          <div class="row"><span class="k">Correo alternativo</span><span class="v">maria.gonzalez@mail.com</span></div>
+          <div class="row"><span class="k">Dirección</span><span class="v">San Lorenzo, PY</span></div>
+        </div>
+
+        <p class="section-title">Pacientes a cargo</p>
+        <div class="patient-card">
+          <div class="avatar">MR</div>
+          <div class="info"><div class="name">Marcos Rojas</div><div class="meta">Principal · puede editar datos y calibrar</div></div>
+        </div>
+
+        <p class="section-title">Cuenta</p>
+        <div class="card">
+          <div class="row"><span class="k">Correo</span><span class="v">maria.gonzalez@mail.com</span></div>
+          <div class="row"><span class="k">Último acceso</span><span class="v">Hoy, 08:10</span></div>
+          <div class="row"><span class="k">Miembro desde</span><span class="v">Feb 2024</span></div>
+        </div>
+
+        <div class="btn ghost" style="margin-top:16px;">Editar datos personales</div>
+        <div class="btn ghost">Cambiar contraseña</div>
+        <a href="#" class="btn ghost" style="display:block; text-decoration:none;">Política de privacidad</a>
+        <div class="btn coral">Cerrar sesión</div>
+      </div>
+      <div class="bottom-nav">
+        <div class="item"><div class="ico"></div><span>Pacientes</span></div>
+        <a href="#pantalla-cuidador-diagnosticos" class="item" style="text-decoration:none;"><div class="ico"></div><span>Diagnósticos</span></a>
+        <div class="item"><div class="ico"></div><span>Historial</span></div>
+        <div class="item"><div class="ico"></div><span>Facturación</span></div>
+        <div class="item active"><div class="ico"></div><span>Perfil</span></div>
       </div>
     </div></div>
   </div>
@@ -1703,6 +2140,10 @@
           Ver registros de auditoría
         </div>
         <div class="action-item">
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6l7-3z" stroke="currentColor" stroke-width="1.6"/></svg></span>
+          Editar diagnósticos
+        </div>
+        <div class="action-item">
           <span class="ico"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2v20M12 2l5 4-5 4 5 4-5 4M7 6l5 4-5 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
           Estado de dispositivos
         </div>
@@ -1714,8 +2155,9 @@
       <div class="bottom-nav">
         <div class="item active"><div class="ico"></div><span>Panel</span></div>
         <div class="item"><div class="ico"></div><span>Usuarios</span></div>
+        <div class="item"><div class="ico"></div><span>Diagnósticos</span></div>
         <div class="item"><div class="ico"></div><span>Auditoría</span></div>
-        <div class="item"><div class="ico"></div><span>Perfil</span></div>
+        <a href="#pantalla-perfil-admin" class="item" style="text-decoration:none;"><div class="ico"></div><span>Perfil</span></a>
       </div>
     </div></div>
   </div>
@@ -1802,8 +2244,62 @@
       <div class="bottom-nav">
         <div class="item"><div class="ico"></div><span>Panel</span></div>
         <div class="item"><div class="ico"></div><span>Usuarios</span></div>
+        <div class="item"><div class="ico"></div><span>Diagnósticos</span></div>
         <div class="item"><div class="ico"></div><span>Auditoría</span></div>
-        <div class="item"><div class="ico"></div><span>Perfil</span></div>
+        <a href="#pantalla-perfil-admin" class="item" style="text-decoration:none;"><div class="ico"></div><span>Perfil</span></a>
+      </div>
+    </div></div>
+  </div>
+
+  <!-- 8c. ADMIN - VALIDAR DIAGNOSTICOS -->
+  <div class="phone-block" id="pantalla-validar-diagnosticos">
+    <div class="phone-label">Rol Administrador · <b>Diagnósticos</b></div>
+    <div class="phone"><div class="screen">
+      <div class="statusbar"><span>9:41</span><span>●●●</span></div>
+      <div class="topbar"><h2>Diagnósticos</h2></div>
+      <div class="content">
+        <div class="audit-filter">
+          <div class="audit-chip selected">Todos</div>
+          <div class="audit-chip">Marcos Rojas</div>
+          <div class="audit-chip">Juan Paredes</div>
+          <div class="audit-chip">Lucía Fernández</div>
+        </div>
+
+        <div class="audit-table">
+          <div class="audit-row">
+            <div class="top-line"><span class="user">Marcos Rojas</span><span class="badge amber">Secundario</span></div>
+            <div class="action">Contractura cervical crónica</div>
+            <div class="meta"><span>Cargado por: <b>Lic. Carlos Herrera</b></span><span>Hoy, 08:20</span></div>
+            <a href="#pantalla-editar-diagnostico" style="display:flex; justify-content:flex-end; margin-top:8px; text-decoration:none;">
+              <span class="badge ok" style="cursor:pointer;">✎ Editar</span>
+            </a>
+          </div>
+
+          <div class="audit-row">
+            <div class="top-line"><span class="user">Juan Paredes</span><span class="badge ok">Principal</span></div>
+            <div class="action">Parálisis cerebral espástica</div>
+            <div class="meta"><span>Cargado por: <b>María González</b></span><span>Ayer, 16:45</span></div>
+            <a href="#pantalla-editar-diagnostico" style="display:flex; justify-content:flex-end; margin-top:8px; text-decoration:none;">
+              <span class="badge ok" style="cursor:pointer;">✎ Editar</span>
+            </a>
+          </div>
+
+          <div class="audit-row">
+            <div class="top-line"><span class="user">Lucía Fernández</span><span class="badge warn">Antecedente</span></div>
+            <div class="action">Cirugía de columna cervical</div>
+            <div class="meta"><span>Cargado por: <b>Ana Duarte</b></span><span>Ayer, 11:10</span></div>
+            <a href="#pantalla-editar-diagnostico" style="display:flex; justify-content:flex-end; margin-top:8px; text-decoration:none;">
+              <span class="badge ok" style="cursor:pointer;">✎ Editar</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="bottom-nav">
+        <div class="item"><div class="ico"></div><span>Panel</span></div>
+        <div class="item"><div class="ico"></div><span>Usuarios</span></div>
+        <div class="item active"><div class="ico"></div><span>Diagnósticos</span></div>
+        <div class="item"><div class="ico"></div><span>Auditoría</span></div>
+        <a href="#pantalla-perfil-admin" class="item" style="text-decoration:none;"><div class="ico"></div><span>Perfil</span></a>
       </div>
     </div></div>
   </div>
@@ -1864,8 +2360,58 @@
       <div class="bottom-nav">
         <div class="item"><div class="ico"></div><span>Panel</span></div>
         <div class="item"><div class="ico"></div><span>Usuarios</span></div>
+        <div class="item"><div class="ico"></div><span>Diagnósticos</span></div>
         <div class="item active"><div class="ico"></div><span>Auditoría</span></div>
-        <div class="item"><div class="ico"></div><span>Perfil</span></div>
+        <a href="#pantalla-perfil-admin" class="item" style="text-decoration:none;"><div class="ico"></div><span>Perfil</span></a>
+      </div>
+    </div></div>
+  </div>
+
+  <!-- 10. ADMIN - Perfil -->
+  <div class="phone-block" id="pantalla-perfil-admin">
+    <div class="phone-label">Rol Administrador · <b>Perfil</b></div>
+    <div class="phone"><div class="screen">
+      <div class="statusbar"><span>9:41</span><span>●●●</span></div>
+      <div class="topbar"><h2>Mi perfil</h2></div>
+      <div class="content">
+        <div style="display:flex; flex-direction:column; align-items:center; gap:8px; margin:6px 0 18px;">
+          <div class="avatar" style="width:64px; height:64px; font-size:20px; flex:0 0 64px;">AD</div>
+          <div style="font-family:var(--disp); font-size:16px; font-weight:600; color:var(--text);">admin_root</div>
+          <span class="badge warn">Administrador</span>
+        </div>
+
+        <p class="section-title">Datos de cuenta</p>
+        <div class="card">
+          <div class="row"><span class="k">Nombre</span><span class="v">Adrián Ortiz</span></div>
+          <div class="row"><span class="k">Correo</span><span class="v">admin@headmousepro.com</span></div>
+          <div class="row"><span class="k">Teléfono</span><span class="v">0983 555 000</span></div>
+          <div class="row"><span class="k">Miembro desde</span><span class="v">Ene 2024</span></div>
+        </div>
+
+        <p class="section-title">Actividad</p>
+        <div class="card">
+          <div class="row"><span class="k">Último acceso</span><span class="v">Hoy, 07:52</span></div>
+          <div class="row"><span class="k">IP de último acceso</span><span class="v">190.x.x.10</span></div>
+          <div class="row"><span class="k">Usuarios gestionados</span><span class="v">128</span></div>
+        </div>
+
+        <p class="section-title">Seguridad</p>
+        <div class="card">
+          <div class="row"><span class="k">Verificación en 2 pasos</span><span class="v"><span class="badge ok">Activa</span></span></div>
+          <div class="row"><span class="k">Rol</span><span class="v">ADMINISTRADOR</span></div>
+        </div>
+
+        <div class="btn ghost" style="margin-top:16px;">Editar datos personales</div>
+        <div class="btn ghost">Cambiar contraseña</div>
+        <a href="#pantalla-validar-diagnosticos" class="btn ghost" style="display:block; text-decoration:none;">Ir a Diagnósticos</a>
+        <div class="btn coral">Cerrar sesión</div>
+      </div>
+      <div class="bottom-nav">
+        <div class="item"><div class="ico"></div><span>Panel</span></div>
+        <div class="item"><div class="ico"></div><span>Usuarios</span></div>
+        <div class="item"><div class="ico"></div><span>Diagnósticos</span></div>
+        <div class="item"><div class="ico"></div><span>Auditoría</span></div>
+        <div class="item active"><div class="ico"></div><span>Perfil</span></div>
       </div>
     </div></div>
   </div>
